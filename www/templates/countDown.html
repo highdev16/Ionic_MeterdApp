@@ -1,0 +1,216 @@
+<ionic-view>
+
+  <div class="countdown_container">
+
+    <div>
+      <h5 style="font-size:1.1em; padding-left:5%;">
+        <img style="width:20px; height:20px;"src="img/meterd_logo.png">&nbsp &nbsp
+        {{appState.user.markAddress}}
+      </h5>
+    </div>
+
+    <map-directive data-tap-disabled="true"></map-directive>
+
+    <div style="text-align:center;">
+      <h4 style="font-weight:400;">Countdown</h4>
+    </div>
+    <div class="countDownTimerText">
+      <h1 style="font-size:4.8em;">{{counter | formatTimer}}</h1>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <h4>Space Number &nbsp</h4>
+      </div>
+      <div class="fixed-col">
+        <h4 class="greyText">{{appState.user.spaceNum}}</h4>
+      </div>
+    </div>
+
+      <!-- <div class="item" style="">
+        <span >Space Number</span>
+        <span style="float:right;">{{appState.user.spaceNum}}</span>
+      </div> -->
+
+    <div class="row">
+      <div class="col">
+        <h4 style="line-height:80px;">Add Time &nbsp</h4>
+      </div>
+      <div class="fixed-col">
+        <ul class="timeAdjuster">
+          <li style="text-align:center;" ng-model="addThisTime" ng-click="addHour(); consoleHr()"><img src="img/meterArrowButton.svg" alt=""></li>
+          <li>
+            <h4 class="greyText" style="min-width: 4em; text-align: center;">{{hr}} Hr</h4>
+          </li>
+          <li style="text-align:center;" ng-click="minusHour()" ng-model="hr"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+        </ul>
+      </div>
+      <div class="fixed-col">
+        <ul class="timeAdjuster">
+          <li style="text-align:center;" ng-click="addMin()" ng-model="min"><img src="img/meterArrowButton.svg" alt=""></li>
+          <li>
+            <h4 class="greyText" style="min-width: 4em; text-align: center;">{{min}} Min</h4>
+          </li>
+          <li style="text-align:center;" ng-click="minusMin()" ng-model="min"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+        </ul>
+      </div>
+
+    </div>
+  <!--   <div class="fullRow" style="margin-top:60px;">
+    <div style="float:left;margin-left:20px;">
+      <h4>Added Cost</h4>
+    </div>
+    <div style="float:right;margin-right:20px;">
+      <h4 class="greyText">$0.00</h4>
+    </div>
+
+  </div> -->
+
+    <!-- <label class="item item-input">
+        <span class="input-label">Time</span>
+        <input style="float:right;" type="text" pattern="[0-9]*" ng-model="i.time">
+      </label> -->
+
+
+
+      <div class="park_button_container">
+        <button class="extendFooter button button-block button-full button-balanced park_button" ng-click="addTime()">
+            Extend My Time
+        </button>
+        <button class="leaveFooter button button-block button-full button-assertive park_button" ng-click="leave()">
+            Leave
+        </button>
+      </div>
+
+<!--
+  <ion-footer-bar style="border:none;background-image:none;">
+    <div class="bar bar-footer bar-balanced extendFooter" style="height:60px;cursor:pointer;" ng-click="addTime()">
+      <div class="title"><h4 style="color:white;height:60px;line-height:30px;">Extend My Time</h4></div>
+    </div>
+  </div>
+    <div class="bar bar-footer bar-asssertive leaveFooter" style="height:60px;cursor:pointer;">
+      <div class="title"><h4 style="color:white;height:60px;line-height:30px;" ng-click="leave()">Leave</h4></div>
+    </div>
+  </ion-footer-bar>
+-->
+
+</div>
+</ionic-view>
+<!-- <ionic-view>
+  <ion-content style="padding-top:50px;">
+    <div>
+      <h5 style="font-size:1.1em; padding-left:5%;"><img style="width:20px; height:20px;"src="img/meterd_logo.png">&nbsp &nbsp
+      123 Main St. Charleston, SC 12345
+      </h5>
+    </div>
+  </ion-content>
+  <ion-content class="angular-google-map-container"scroll="false" style="margin-top:100px;max-height:15%;">
+
+    <div map-lazy-load="http://maps.google.com/maps/api/js" style="height:100%;">
+      <map class="angular-google-map" center="32.7833,-79.9333" zoom="14"></map>
+    </div> -->
+    <!-- <map on-create="mapCreated(map)"></map> -->
+  <!-- </ion-content>
+    <ion-content style="margin-top:220px;">
+      <div style="text-align:center;">
+        <h4 style="font-weight:400;">Countdown</h4>
+      </div>
+      <div class="countDownTimerText">
+        <h1>1:27</h1>
+      </div>
+    </ion-content>
+    <ion-content style="margin-top:400px;">
+      <div class="fullRow">
+        <div style="float:left;margin-left:20px;">
+          <h4>Space Number &nbsp</h4>
+        </div>
+        <div style="float:right;margin-right:20px;">
+          <h4 class="greyText">01</h4>
+        </div>
+      </div>
+
+      <div class="fullRow">
+        <div style="float:left;margin-left:20px;">
+          <h4 style="line-height:80px;">Add Time &nbsp</h4>
+        </div>
+        <div style="float:right;">
+          <ul class="timeAdjuster" style="margin-right:10px;">
+            <li style="text-align:center;" ng-click="hr = hr + 1" ng-init="hr = 0"><img src="img/meterArrowButton.svg" alt=""></li>
+            <li>
+              <h4 class="greyText" style="width: 100px;">{{hr}} Hr</h4>
+            </li>
+            <li style="text-align:center;" ng-click="hr > 0 ? hr = hr - 1 : hr = 0"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+          </ul>
+          <ul class="timeAdjuster">
+            <li style="text-align:center;" ng-init="min = 00" ng-click="min = min + 1"><img src="img/meterArrowButton.svg" alt=""></li>
+            <li>
+              <h4 class="greyText">{{min}} Min</h4>
+            </li>
+            <li style="text-align:center;" ng-click="min > 0 ? min = min - 1 : min = 0"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="fullRow" style="margin-top:60px;">
+        <div style="float:left;margin-left:20px;">
+          <h4>Added Cost</h4>
+        </div>
+        <div style="float:right;margin-right:20px;">
+          <h4 class="greyText">$0.00</h4>
+        </div>
+
+      </div>
+
+    </ion-content>
+
+  </ion-content>
+  <ion-footer-bar>
+    <a href=""><div class="bar bar-footer bar-balanced extendFooter" style="height:60px;">
+      <div class="title"><h4 style="color:white; padding-top:3%;">Extend My Time</h4></div>
+    </div></a>
+    <a href="#/app/park"><div class="bar bar-footer bar-asssertive leaveFooter" style="height:60px;">
+      <div class="title"><h4 style="color:white; padding-top:3%;">Leave</h4></div>
+    </div></a>
+  </ion-footer-bar>
+</ionic-view> -->
+
+
+<!--   <ion-content class="angular-google-map-container"scroll="false" style="margin-top:100px;max-height:15%;">
+
+  <div map-lazy-load="http://maps.google.com/maps/api/js" style="height:100%;">
+    <map class="angular-google-map" center="32.7833,-79.9333" zoom="14"></map>
+  </div>
+  <map on-create="mapCreated(map)"></map> -->
+
+
+<!--    <p>User {{user | json}}</p>
+ -->  <!--  <h1>Counter: {{counter | formatTimer}}</h1> -->
+
+
+
+        <!--   <ul class="timeAdjuster" style="margin-right:10px;">
+          <li style="text-align:center;" ng-click="hr = hr + 1" ng-init="hr = 0"><img src="img/meterArrowButton.svg" alt=""></li>
+          <li>
+            <h4 class="greyText" style="width: 100px;">{{hr}} Hr</h4>
+          </li>
+          <li style="text-align:center;" ng-click="hr > 0 ? hr = hr - 1 : hr = 0"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+        </ul> -->
+        <!--   <ul class="timeAdjuster">
+          <li style="text-align:center;" ng-init="min = 00" ng-click="min = min + 1"><img src="img/meterArrowButton.svg" alt=""></li>
+          <li>
+            <h4 class="greyText">{{min}} Min</h4>
+          </li>
+          <li style="text-align:center;" ng-click="min > 0 ? min = min - 1 : min = 0"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+        </ul> -->
+
+      <!-- <div class="fullRow" style="margin-top:60px;">
+        <div style="float:left;margin-left:20px;">
+          <h4>Added Cost</h4>
+        </div>
+        <div style="float:right;margin-right:20px;">
+          <h4 class="greyText">$0.00</h4>
+        </div>
+
+      </div> -->

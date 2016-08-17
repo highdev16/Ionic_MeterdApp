@@ -1,0 +1,21 @@
+<ion-view>
+
+  <div class="search_map_container">
+
+      <map-directive data-tap-disabled="true"></map-directive>
+
+      <div class="search_current_address">
+          <h5 style="font-size:1.1em; font-weight:100px"><img style="width:20px; height:20px;"src="img/meterd_logo.png">&nbsp &nbsp
+            {{appState.user.markAddress}}
+          </h5>
+      </div>
+
+      <div class="park_button_container">
+        <button class="button button-block button-full button-balanced park_button" ng-click="onParkClicked()">
+            Pay For Parking
+        </button>
+      </div>
+
+  </div>
+
+ </ion-view>

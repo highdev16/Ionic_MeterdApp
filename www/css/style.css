@@ -1,0 +1,146 @@
+/* Empty. Add your own CSS if you like */
+.tabs-striped .tab-item.tab-item-active {
+  border-bottom:1px solid #AE6EEC;
+  background-color:#AE6EEC;
+  color:white;
+}
+.tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated{
+  margin-top:0;
+}
+.item-select select {
+  max-width:85%;
+}
+.bar{
+  background-image:none;
+}
+.tab-item{
+  opacity:1;
+  font-style:bold;
+}
+.tabs-striped .tabs{
+  border-top:1px solid #AE6EEC !important;
+  border-bottom:1px solid #AE6EEC;
+  color:#AE6EEC;
+
+}
+.tab-item{
+  max-width: none;
+
+}
+.tab-item.activated {
+	border-color: #AE6EEC !important;
+  background-color:#AE6EEC;
+}
+
+.scroll {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.extendFooter {
+  right: auto;
+  float: left;
+  width: 65%;
+  height: 40px;
+  background-color: #62AF66;
+}
+.leaveFooter {
+  left: auto;
+  float: right;
+  width: 35%;
+  height: 40px;
+  background-color: #A03546;
+}
+.countDownTimerText {
+  text-align: center;
+  margin-top: -20px;
+}
+.countDownTimerText h1 {
+  color: mediumpurple;
+  font-size: 7em;
+  font-weight: 400;
+}
+.fullRow {
+  width: 100%;
+  height: 60px;
+}
+.fullRow h3{
+  font-weight: 300;
+}
+.greyText {
+  color: #AEAEAE;
+  font-style: italic;
+}
+.flip180 {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.timeAdjuster {
+}
+.windowAddress{
+  position: absolute;
+  top: 0px;
+  height: 10px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.direct{
+  background-color: #af69ef;
+  border: 0;
+  color: white;
+  display: block;
+  margin: 0 auto;
+}
+#hamburgerMenu {
+  opacity: 0;
+}
+
+.search_map_container, .park_container, .countdown_container {
+  padding-top:44px;
+  display: flex;
+  width:  100% ;
+  height: 100%;
+  flex-direction: column;
+}
+
+.park_container {
+  padding-top:0;
+}
+
+.search_map {
+  flex: 1 1 auto;
+}
+
+.search_current_address {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow:row;
+}
+
+.park_button_container {
+  display: flex;
+  flex: 0 1 auto;
+}
+
+.park_button {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.fixed-col {
+  padding: 5px;
+  vertical-align: baseline;
+}

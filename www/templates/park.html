@@ -1,0 +1,191 @@
+<ionic-view ng-controller="MapCtrl as vm" style="padding-top:45px;">
+
+  <div class="park_container">
+<!--
+        <label class="item item-input item-select">
+          <span class="input-label" style="max-width:100px;"><img style="width:20px; height:20px;"src="img/meterd_logo.png"></span>
+          <select ng-model="selected" style="margin-left:-450px;"ng-change="saveSpace(selected)">
+            <option  ng-repeat="i in vm.foodTrucks" value="{{i.price}}" style="padding-right:50px;"required>{{i.address}}</option>
+          </select>
+        </label>
+-->
+
+      <div class="search_current_address">
+          <h5 style="font-size:1.1em; font-weight:100px"><img style="width:20px; height:20px;"src="img/meterd_logo.png">&nbsp &nbsp
+            {{appState.user.markAddress}}
+          </h5>
+      </div>
+
+
+      <map-directive data-tap-disabled="true"></map-directive>
+
+    <form ng-submit="reserveSpace(i, appState.user)">
+      <div class="list">
+        <!-- <label class="item item-input item-select">
+          <span class="input-label">Location</span>
+          <select ng-model="selected" ng-change="saveSpace(selected)">
+            <option  ng-repeat="i in vm.foodTrucks" value="{{i.price}}" required>{{i.address}}</option>
+          </select>
+        </label> -->
+
+        <div class="row">
+          <div class="col">
+            <h4>Price Per Hour &nbsp</h4>
+          </div>
+
+          <div class="fixed-col">
+            <h4 class="greyText">${{appState.user.Price}}</h4>
+          </div>
+        </div>
+
+      <!--   <label class="item item-input" style="padding-right:48px;">
+        <span class="input-label">Price Per Hour</span>
+        <span style="float:right;text-align:right;">${{selected}}</span>
+      </label> -->
+
+        <div class="row">
+          <div class="col">
+            <h4>Space Number &nbsp</h4>
+          </div>
+          <div class="fixed-col">
+
+            <input type="number" style="padding-top: 7px; text-align: end" pattern="[0-9]*" ng-model="i.space" required>
+
+          </div>
+        </div>
+
+      <!--  <label class="item item-input">
+        <span class="input-label">Space Number</span>
+        <input type="text" pattern="[0-9]*" ng-model="i.space" required>
+      </label> -->
+
+      <div class="row">
+        <div class="col">
+          <h4 style="line-height:80px;">Time &nbsp</h4>
+        </div>
+
+        <div class="fixed-col">
+          <ul class="timeAdjuster">
+            <li style="text-align:center;" ng-model="addThisTime" ng-click="addHour(); consoleHr()"><img src="img/meterArrowButton.svg" alt=""></li>
+            <li>
+              <h4 class="greyText" style="min-width: 4em; text-align: center;">{{hr}} Hr</h4>
+            </li>
+            <li style="text-align:center;" ng-click="minusHour()" ng-model="hr"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+          </ul>
+        </div>
+
+        <div class="fixed-col">
+          <ul class="timeAdjuster">
+            <li style="text-align:center;" ng-click="addMin()" ng-model="min"><img src="img/meterArrowButton.svg" alt=""></li>
+            <li>
+              <h4 class="greyText" style="min-width: 4em; text-align: center;">{{min}} Min</h4>
+            </li>
+            <li style="text-align:center;" ng-click="minusMin()" ng-model="min"><img src="img/meterArrowButton.svg" alt="" class="flip180"></li>
+          </ul>
+        </div>
+
+     </div>
+
+      <div class="park_button_container">
+        <button class="button button-block button-full button-balanced park_button" type="submit">
+            Finish
+        </button>
+      </div>
+
+ </form>
+ </div>
+</div>
+</div>
+</ionic-view>
+
+      <!-- </form> -->
+
+<!--   <button class="btn" onclick="addTime()" ng-init="count=0; time=0" type="button">Add 15 minutes</button> -->
+<!--  </div> -->
+
+ <!-- <button class="btn" ng-click="count = count + .25; time = time + 15" onclick="addTime()" ng-init="count=0; time=0" type="button">Add 15 minutes</button> -->
+<!-- </div> -->
+
+<!--   <a href="#/app/countDown"><div class="bar bar-footer bar-balanced" style="height:60px; line-height:10px;">
+  <div class="title"><h3 style="color:white; padding-top:3%;">Finish</h3></div> -->
+  <!-- <a href="#/app/countDown" ng-click="setUserTime()">
+    <div class="bar bar-footer bar-balanced" style="height:60px; line-height:10px;">
+      <div class="title">
+        <h3 style="color:white; padding-top:3%;">Finish</h3>
+      </div>
+    </div>
+  </a> -->
+  <!--  <div class="row">
+     <div class="col-50" style="text-align:right;">
+       <h3>Space Number &nbsp</h3>
+     </div>
+     <div class="col">
+       <input type="text" placeholder="01">
+     </div>
+   </div><br>
+   <div class="row">
+     <div class="col-50" style="text-align:right;">
+       <h3>Timer &nbsp</h3>
+     </div>
+     <div class="col-10">
+       <input type="number" placeholder="01">
+     </div>
+      <div class="col">
+       hr(s)
+     </div>
+     <div class="col">
+       <input type="number" placeholder="01">
+     </div>
+     <div class="col">
+       mins
+     </div>
+   </div>
+   <br>
+    <div class="row">
+     <div class="col-50" style="text-align:right;">
+       <h3>Cost &nbsp</h3>
+     </div>
+     <div class="col">
+       <input type=number placeholder="01">
+     </div>
+   </div>  -->
+
+<!--     <button class="button button-block button-positive" onclick="reserveSpace()">Finish</button>
+ -->
+
+    <!-- <div class="row">
+      <div class="col-50" style="text-align:right;">
+        <h3>Credit Card &nbsp</h3>
+      </div>
+      <div class="col">
+        <input type=text pattern="[0-9]{13,16}" placeholder="*4530">
+      </div>
+    </div> -->
+
+
+
+<!--   FORM TO ADD PRICE, SPACE, & TIME MANUALLY
+   <form>
+   <div class="list">
+     <label class="item item-input">
+       <span class="input-label">Space Number</span>
+       <input type="text" ng-model="i.space">
+     </label>
+     <label class="item item-input">
+       <span class="input-label">Time</span>
+       <input type="text" ng-model="i.time">
+     </label>
+     <label class="item item-input">
+       <span class="input-label">Price per Hour $</span>
+       <input type="text" ng-model="i.price">
+<p ng-model"i.price">Price Per Hour: ${{selected}}</p>
+     </label>
+     <label class="item">
+    <button class="button button-block button-positive" ng-click="reserveSpace(i)">Finish</button>
+     </label>
+   </div>
+ </div>
+      </form>
+      FORM TO ADD PRICE, SPACE, & TIME MANUALLY
+
+       -->

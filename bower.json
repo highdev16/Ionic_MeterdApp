@@ -1,0 +1,25 @@
+{
+  "name": "HelloIonic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.1.0"
+  },
+  "dependencies": {
+    "angular-payment": "*",
+    "angular-payments": "2472bc9befa25678",
+    "angular-stripe": "~4.2.8",
+    "angular-timer": "~1.3.3",
+    "angularjs-google-directions": "~0.1.0",
+    "ionic-shop": "*",
+    "ng-cordova-oauth": "~0.1.4",
+    "ngCordova": "~0.1.20-alpha"
+  },
+  "resolutions": {
+    "angular-payments": "2472bc9befa25678",
+    "ionic": "1.1.0",
+    "angular": "1.4.3",
+    "angular-animate": "1.4.3",
+    "angular-sanitize": "1.4.3",
+    "angular-ui-router": "0.2.13"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "ionic-shop",
+  "homepage": "https://github.com/JoshSGman/ionic-shop",
+  "authors": [
+    "Josh <jsgoldberg90@gmail.com>"
+  ],
+  "description": "An e-commerce library for ionic",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "1.2.3",
+    "ionic": "~0.9.27",
+    "angular": "~1.2.12"
+  },
+  "_release": "2f2340888d",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2f2340888d7420cf3d71c521763b3ae2626e5a8b"
+  },
+  "_source": "git://github.com/JoshSGman/ionic-shop.git",
+  "_target": "*",
+  "_originalSource": "ionic-shop",
+  "_direct": true
+}

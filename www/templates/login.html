@@ -1,0 +1,32 @@
+<ion-view >
+    <ion-content padding="true" class="has-header">
+        <form>
+          <div class="facebookButton" style="text-align:center; ">
+            <!--   <button class="button button-block" ng-click="login('facebook')" style="border-radius:5px; background-color:#2C4289; border-color:#2C4289;color:white;">
+              <i style="font-size:30px;" class="icon ion-social-facebook"></i> Facebook Connect
+            </button>  -->
+            <button class="button button-block" ng-click="login(data); go('/search')" style="border-radius:5px; background-color:#2C4289; border-color:#2C4289;color:white;">  <i style="font-size:30px;" class="icon ion-social-facebook"></i> Facebook Connect
+            </button>
+          <!--   <button class="button button-full button-positive" ng-click="login()">Login with Facebook</button> -->
+                <!--   <button class="button button-full button-outline button-assertive" ng-click="logout()">Logout</button> -->
+
+
+            <p style="font-style:italic; color:grey;">Or, login with email</p>
+          </div>
+            <ion-list>
+              <label class="item item-input" style="border-radius:5px;">
+                  <i style="font-size:30px;" class="icon ion-ios-email-outline placeholder-icon"></i>
+                  <input type="email" placeholder="Email" ng-model="data.email">
+              </label>
+              <br>
+              <label class="item item-input" style="border-radius:5px;">
+                    <i style="font-size:30px;" class="icon ion-ios-locked-outline placeholder-icon"></i>
+                  <input type="password" placeholder="Password (at least 6 characters)" ng-model="data.password">
+              </label>
+            </ion-list>
+            <br>
+            <button class="button button-royal button-full" ng-click="loginEmail(data); go('/search')" style="border-radius:5px;">Done</button>
+            <br>
+            <p style="font-style:italic; text-align:center; color:grey;">Not a user? <a href="#/app/signup">Sign Up</a></p>
+    </ion-content>
+</ion-view>

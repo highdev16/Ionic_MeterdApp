@@ -1,0 +1,84 @@
+<ion-view >
+
+  <ion-content ng-controller="LoginCtrl">
+    <!-- <div ng-if="authData.facebook" class="list card">
+      <div class="item item-avatar">
+        <div class="item-image facebook-avatar" back-img="{{authData.facebook.cachedUserProfile.picture.data.url}}"></div>
+        <h2>{{authData.facebook.displayName}}</h2>
+        <p>Facebook</p>
+      </div> -->
+
+  <div class="facebookButton" style="text-align:center; padding:2%;">
+  <!--   <button class="button button-block" ng-click="login('facebook')" style="border-radius:5px; background-color:#2C4289; border-color:#2C4289;color:white;">
+    <i style="font-size:30px;" class="icon ion-social-facebook"></i> Facebook Connect
+  </button>  -->
+  <button class="button button-block" ng-click="login()" style="border-radius:5px; background-color:#2C4289; border-color:#2C4289;color:white;">  <i style="font-size:30px;" class="icon ion-social-facebook"></i> Facebook Connect
+  </button>
+<!--   <button class="button button-full button-positive" ng-click="login()">Login with Facebook</button> -->
+      <!--   <button class="button button-full button-outline button-assertive" ng-click="logout()">Logout</button> -->
+
+
+      <p style="font-style:italic;color:grey;">Or, sign up with email</p>
+    </div>
+    <!-- <form ng-submit="doLogin()">
+      <div class="list">
+        <div class="list list-inset">
+          <label class="item item-input">
+            <i style="font-size:30px;" class="icon ion-ios-person-outline placeholder-icon"></i>
+            <input type="text" placeholder="Name" ng-model="loginData.username">
+
+          </label>
+          <br>
+          <label class="item item-input">
+            <i style="font-size:30px;" class="icon ion-ios-email-outline placeholder-icon"></i>
+            <input type="email" ng-model="loginData.email" placeholder="Email">
+          </label>
+        </div>
+
+
+      </div>
+    </form> -->
+
+    <form>
+        <div class=" list list-inset">
+          <label class="item item-input" style="border-radius:5px;">
+            <i style="font-size:30px;" class="icon ion-ios-person-outline placeholder-icon"></i>
+            <input type="text" placeholder="First Name" ng-model="data.firstname">
+          </label>
+          <br>
+          <label class="item item-input" style="border-radius:5px;">
+            <i style="font-size:30px;" class="icon ion-ios-person-outline placeholder-icon"></i>
+            <input type="text" placeholder="Last Name" ng-model="data.lastname">
+          </label>
+          <br>
+            <!--  <label class="item item-input">
+                        <span class="input-label">First Name</span>
+                        <input type="email" placeholder="enter first name..." ng-model="data.firstname">
+                   </label>
+                   <label class="item item-input">
+                        <span class="input-label">Last Name</span>
+                        <input type="email" placeholder="enter last name..." ng-model="data.lastname">
+                   </label> -->
+            <label class="item item-input" style="border-radius:5px;">
+                <i style="font-size:30px;" class="icon ion-ios-email-outline placeholder-icon"></i>
+                <input type="email" placeholder="Email" ng-model="data.email">
+            </label>
+            <br>
+            <label class="item item-input" style="border-radius:5px;">
+                <i style="font-size:30px;" class="icon ion-ios-locked-outline placeholder-icon"></i>
+                <input type="password" placeholder="Password (at least 6 characters)" ng-model="data.password">
+            </label>
+
+        </div>
+        <div style="position: absolute; bottom: 0px; width: 100%">
+          <button class="button button-royal button-full" ng-click="signupEmail();  go('/login')" style="height:60px;">Next</button>
+        </div>
+    </form>
+
+  </ion-content>
+  <!-- <div style="position: absolute; bottom: 0px; width: 100%">
+    <a href="#/app/search" style="text-decoration:none;">
+      <button class="button button-full button-royal" ng-click="signupEmail();  go('/login')" style="height:60px;" >Next</button>
+    </a>
+  </div> -->
+</ion-view>

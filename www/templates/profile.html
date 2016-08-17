@@ -1,0 +1,62 @@
+<ion-view>
+  <ion-tabs class="tabs-top tabs-striped" style="max-width:none; ">
+    <ion-tab title="My Info" style="max-width:none; ">
+      <br />
+      <ion-content class="padding" style="padding:10%;">
+        <div class="row" style="margin-top:15%;">
+          <div class="col"  style="text-align:center;">
+            <img class="" ng-if="!image" src="img/placeholder-person.png" style="border-radius:100%;"ng-click="upload()">
+            <img class="" ng-if="image" ng-src="data:image/jpeg;base64,{{image}}" style="border-radius:100%;" ng-click="upload()" width="80%">
+          </div>
+        </div>
+        <form ng-submit="update(newUser, appState.user)">
+
+          <div class="item" style="margin-bottom:-10px;">
+            <span>First Name:</span>
+            <span class="item-note" style="margin-top:-5px;">
+              <input type="text" ng-model="newUser.firstname" class="form-control" id="firstnameInput" placeholder="{{appState.user.firstname}}">
+            </span>
+          </div>
+          <div class="item" style="margin-bottom:-10px;">
+            <span>Last Name:</span>
+            <span class="item-note" style="margin-top:-5px;">
+              <input type="text" ng-model="newUser.lastname" class="form-control" id="lastnameInput" placeholder="{{appState.user.lastname}}">
+            </span>
+          </div>
+          <div class="item" style="margin-bottom:-10px;">
+            <span>Email:</span>
+            <span class="item-note" style="margin-top:-5px;">
+              <input type="text" ng-model="newUser.email" class="form-control" id="emailInput" placeholder="{{appState.user.email}}">
+            </span>
+          </div>
+        <!--   <a class="item" href="#">
+
+          Last Name
+          <span class="item-note">
+            {{appState.user.lastname}}
+          </span>
+        </a> -->
+
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+      </ion-content>
+    </ion-tab>
+    <ion-tab id="payInfo" title="Payment Info" style="max-width:none;">
+      <br />
+      <ion-content delegate-handle="payInfo" class="padding" style="padding:10%;">
+        <div class="list">
+          <a class="item item-icon-left" href="#">
+            <i class="icon ion-email"></i>
+            XXXX XXXX XXXX 4530
+          </a>
+
+          <a class="item item-icon-left item-icon-right" href="#">
+            MM/YY CVV ZIP
+          </a>
+
+        </div>
+      </ion-content>
+    </ion-tab>
+
+</ion-view>

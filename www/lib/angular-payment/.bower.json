@@ -1,0 +1,37 @@
+{
+  "name": "angular-payment",
+  "author": {
+    "name": "https://github.com/seandesmond/angular-payment/graphs/contributors"
+  },
+  "main": [
+    "dist/angular-payment-tpls-0.3.0.js"
+  ],
+  "dependencies": {
+    "angular": ">=1"
+  },
+  "ignore": [
+    "src",
+    "docs",
+    "misc",
+    ".gitignore",
+    ".gitattributes",
+    ".travis.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "Gruntfile.js",
+    "karma.conf.js",
+    "package.json",
+    "README.md"
+  ],
+  "homepage": "https://github.com/seandesmond/angular-payment",
+  "_release": "59501056fe",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "59501056fe9c9525b6469867afee26cad4242f5a"
+  },
+  "_source": "git://github.com/seandesmond/angular-payment.git",
+  "_target": "*",
+  "_originalSource": "angular-payment",
+  "_direct": true
+}

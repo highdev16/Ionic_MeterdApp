@@ -1,0 +1,115 @@
+<ion-view>
+
+  <!--   <ion-nav-bar class="bar-stable" align-title="center">
+    <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-android-arrow-back" ng-click='back()'></button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar> -->
+
+
+  <ion-content class="padding">
+<!--     <ion-checkout></ion-checkout>
+
+
+ -->
+ <form action="" method="POST" id="payment-form">
+   <span class="payment-errors"></span>
+
+   <div class="form-row">
+     <label>
+       <span>Card Number</span>
+       <input type="text" size="20" data-stripe="number"/>
+     </label>
+   </div>
+
+   <div class="form-row">
+     <label>
+       <span>CVC</span>
+       <input type="text" size="4" data-stripe="cvc"/>
+     </label>
+   </div>
+
+   <div class="form-row">
+     <label>
+       <span>Expiration (MM/YYYY)</span>
+       <input type="text" size="2" data-stripe="exp-month"/>
+     </label>
+     <span> / </span>
+     <input type="text" size="4" data-stripe="exp-year"/>
+   </div>
+
+   <button type="submit">Submit Payment</button>
+ </form>
+</ion-content>
+
+<!--   <ion-checkout-footer class="bar bar-footer bar-balanced"></ion-checkout-footer>
+ -->
+
+
+
+<!-- <ion-view>
+<ion-content>
+
+
+
+<form name="checkoutForm" stripe-form="stripeCallback" ng-submit="onSubmit()" data-abide>
+ <div ng-if="processing" us-spinner></div>
+
+  <fieldset>
+    <legend>Payment Information</legend>
+
+    <div class="row">
+      <div class="large-6 columns" ng-class="{error: checkoutForm.number.$invalid}">
+        <label>Card Information
+          <input ng-model="number" name="number" payments-format="card" payments-validate="card"
+                 placeholder="Card Number" type="text"/>
+        </label>
+        <small class="error">Invalid card number</small>
+      </div>
+      <div class="large-3 columns" ng-class="{error: checkoutForm.expiry.$invalid}">
+        <label>Expiry
+          <input ng-model="expiry" name="expiry" payments-format="expiry" payments-validate="expiry"
+                 placeholder="Expiry" type="text"/>
+        </label>
+        <small class="error">Invalid date.</small>
+      </div>
+      <div class="large-3 columns" ng-class="{error: checkoutForm.cvc.$invalid}">
+        <label>CVC
+          <input ng-model="cvc" name="cvc" payments-format="cvc" payments-validate="cvc"
+                 placeholder="CVC" type="text"/>
+        </label>
+        <small class="error">Invalid CVC.</small>
+      </div>
+
+      <div class="large-12 columns">
+        <strong>
+       Amount to pay: {{totalAmount}}$
+
+
+        </strong>
+      </div>
+    </div>
+  </fieldset>
+
+  <alert ng-if="stripeError" type="'alert'" close="hideAlerts()">
+    Stripe returned an error: {{stripeError}}
+  </alert>
+
+  <alert ng-if="stripeToken" close="hideAlerts()">
+    Stripe successfully acquired! Token: {{stripeToken}}
+  </alert>
+
+  <div class="clearfix">
+    <div class="right">
+      <button class="cancel" ng-click="$dismiss();">Cancel</button>
+      <button type="submit" ng-disabled="checkoutForm.$invalid">Place Order</button>
+    </div>
+  </div>
+
+ </form>
+
+
+</ion-view>
+</ion-content>
+ -->

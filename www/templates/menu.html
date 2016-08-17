@@ -1,0 +1,49 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left" ng-show="appState.user">
+        </button>
+      </ion-nav-buttons>
+      <ion-nav-buttons side="right" >
+        <img src="img/logo.png"  alt="" style="width:100px;height:20px;margin-top:5px;">
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+    <ion-content>
+      <ion-list style="text-align:center; padding:2%;">
+        <div class="row" style="margin-top:15%;">
+          <div class="col"  style="text-align:center;">
+            <img class="" ng-if="!image" src="img/placeholder-person.png" style="border-radius:100%;">
+            <img class="" ng-if="image" ng-src="data:image/jpeg;base64,{{image}}" style="border-radius:100%;"  width="80%">
+          </div>
+        </div>
+
+        <h5 class="title"><span id="menuFirstName"></span><span id="menuLastName"></span></h5>
+
+      </ion-list>
+      <ion-list>
+        <ion-item menu-close href="#/app/search">
+          Home
+        </ion-item>
+        <ion-item menu-close href="#/app/profile">
+          Profile
+        </ion-item>
+
+        <ion-item menu-close href="mailto:support@meterd.io">
+         Support
+        </ion-item>
+        <ion-item menu-close ng-click="logout()">
+         Log Out
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+</ion-side-menus>
