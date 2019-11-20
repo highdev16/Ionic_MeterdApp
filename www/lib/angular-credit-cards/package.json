@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/bendrucker/angular-credit-cards",
   "devDependencies": {
-    "angular": "~1.4.0",
+    "angular": "~1.7.9",
     "angular-mocks": "~1.4.0",
     "brfs": "~1.4.0",
     "browserify": "~10.2.4",
